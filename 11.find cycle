@@ -1,0 +1,20 @@
+class solution {
+    public:
+    bool hascycle(ListNode*head)
+    {
+        if(head==NULL||head->next==NULL)
+        {
+            return false;
+        }
+       ListNode*slow=head;
+       ListNode*fast=head;
+       while(fast->next&&fast->next->next)//check if fast nexxt is null or fast next next is null,if null dont go inside,otherwise enter into the loop.
+       {
+           fast=fast->next->next;
+           slow=slow->next;
+           if(slow==fast)
+           return true;
+       }
+       return false;
+}
+}
