@@ -1,0 +1,27 @@
+void permutee(vector<int>&A,int start,vector<vector<int> >&result)
+{
+int n=A.size();
+{
+    if(start==n-1)
+    {
+        result.push_back(A);
+        return;
+    }
+    for(int i=start;i<n;i++)
+    {
+         swap(A[start],A[i]);
+         permutee(A,start+1,result);
+         swap(A[start],A[i]);
+    }
+}
+}
+
+
+
+vector<vector<int> > Solution::permute(vector<int> &A) {
+    vector<vector<int> >result;
+
+    int start=0;
+    permutee(A,start,result);
+    return result;
+}
