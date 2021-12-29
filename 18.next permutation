@@ -30,3 +30,5 @@ public:
     }
     };
     
+//complexity- 0(n)+o(n)+0(n)=O(3n)=0(n)
+space=0(1)
